@@ -9,5 +9,6 @@
     shfmt
     kdlfmt
     taplo
+    xclip
   ];
 }
