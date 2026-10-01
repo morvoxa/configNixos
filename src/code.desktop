@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Vscode
+Comment=Vscode microsoft
+Exec=code
+Icon=applications-other
+Terminal=false
+Categories=Utility;Development;

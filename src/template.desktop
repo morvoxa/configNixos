@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Nama Aplikasi Anda
+Comment=Deskripsi singkat aplikasi ini
+Exec=/path/ke/file/eksekusi --opsi
+Icon=applications-other
+Terminal=false
+Categories=Utility;Development;
