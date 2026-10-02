@@ -14,5 +14,6 @@
     rofi
     firefox
     nerd-fonts.jetbrains-mono
+    scrot
   ];
 }

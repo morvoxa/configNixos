@@ -3,4 +3,5 @@ if status is-interactive
     abbr -a l "lsd -la"
     abbr -a hx "helix"
     abbr -a cmt "$HOME/configNixos/src/commit"
+		devenv hook fish --no-tui | source
 end

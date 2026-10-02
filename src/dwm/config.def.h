@@ -78,13 +78,25 @@ static const Layout layouts[] = {
   }
 
 /* commands */
+static const char *screenshot_region[] = {
+    "scrot",
+    "-s",
+    "/tmp/%Y-%m-%d-%T_scrot.png",
+    "-e",
+    "xclip -selection clipboard -t image/png -i $f",
+    NULL};
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
-static const char *roficmd[] = {"rofi", "-show", "drun", NULL};
-static const char *termcmd[] = {"st", NULL};
+static const char *roficmd[] = {"rofi",
+                                "-show",
+                                "combi",
+                                "-combi-modi",
+                                "drun,webapps:~/.local/bin/rofi-webapps",
+                                NULL};
+static const char *termcmd[] = {"alacritty", NULL};
 static void shiftview(const Arg *arg) {
   Arg a;
   Client *c;
@@ -112,6 +124,7 @@ static void shiftview(const Arg *arg) {
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
+    {0, XK_Print, spawn, {.v = screenshot_region}},
     {MODKEY, XK_i, shiftview, {.i = -1}}, // Mod + u -> Mundur (Prev workspace)
     {MODKEY, XK_u, shiftview, {.i = +1}}, // Mod + i -> Maju (Next workspace)
     {MODKEY, XK_p, spawn, {.v = roficmd}},
