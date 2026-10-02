@@ -1,7 +1,6 @@
 $Configs = @(
     @{ Name = "GitConfig"; Source = "src/config/gitconfig"; Destination = "$HOME\.gitconfig"; IsFolder = $false }
     @{ Name = "nvim"; Source = "src/config/nvim"; Destination = "$HOME\AppData\Local\nvim"; IsFolder = $true}
-    @{ Name = "Alacritty"; Source = "src/config/alacritty"; Destination = "$HOME\AppData\Roaming\alacritty"; IsFolder = $true}
 )
 
 $CurrentDir = Get-Location
