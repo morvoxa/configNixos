@@ -22,6 +22,9 @@
       flake = {
         nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
           modules = [
+            {
+              nixpkgs.config.allowUnfree = true;
+            }
             ./configuration.nix
             ./src/cosmic.nix
             ./src/tools.nix
