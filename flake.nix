@@ -36,7 +36,7 @@
               ];
             })
             ./src/dwm.nix
-            ./src/neovim.nix
+            ./src/tools.nix
           ];
         };
       };

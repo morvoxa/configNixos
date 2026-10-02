@@ -13,7 +13,6 @@
     alacritty
     rofi
     firefox
-
     nerd-fonts.jetbrains-mono
   ];
 }

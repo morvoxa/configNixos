@@ -10,5 +10,7 @@
     kdlfmt
     taplo
     xclip
+    clang-tools
+    devenv
   ];
 }
